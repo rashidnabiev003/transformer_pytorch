@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transformer"
+version = "0.1.0"
+description = "A sample Python project in src/"
+authors = [
+    { name = "Rashidkhon Nabiev"}
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = "==3.12.*"
+
+dependencies = [
+    "requests",
+    "toml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[tool.setuptools]
+package-dir = { transformer = "src" }
